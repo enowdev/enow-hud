@@ -99,6 +99,10 @@ The HUD is optimized for minimal performance impact:
 Common issues and solutions:
 1. HUD not showing
    - ✔️ Check resource status
+   - ✔️ Verify dependencies
+2. Performance issues
+   - ⚡ Adjust update intervals
+   - 🔍 Check for conflicts
   
 ## 💖 Support My Work
 <div align="center">
@@ -113,7 +117,3 @@ Common issues and solutions:
 <div align="center">
     <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png" width="100%">
 </div>
-   - ✔️ Verify dependencies
-2. Performance issues
-   - ⚡ Adjust update intervals
-   - 🔍 Check for conflicts
