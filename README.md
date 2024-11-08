@@ -13,7 +13,6 @@
 - 🗺️ Custom bordered minimap
 - 🎙️ Voice indicator
 - 💾 Local settings storage
-- 🌐 Multi-language support
 - ⚡ Responsive and optimized
 
 ## 📥 Installation
