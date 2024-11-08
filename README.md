@@ -9,11 +9,9 @@
 
 ## ✨ Features
 
-- 📊 Customizable status bars (Health, Armor, Hunger, Thirst, Stress)
 - 🚗 Vehicle HUD (Speed, Fuel, Engine Condition, Seatbelt)
 - 🗺️ Custom bordered minimap
 - 🎙️ Voice indicator
-- 🖱️ Drag & drop system for HUD positioning
 - 💾 Local settings storage
 - 🌐 Multi-language support
 - ⚡ Responsive and optimized
