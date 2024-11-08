@@ -32,27 +32,15 @@
 
 Customize the HUD through the `config.lua` file:
 
-- 🏙️ Server/city display settings
-- 👤 Player info configuration
 - 🔧 Feature toggles (health, armor, hunger etc.)
-- 📍 Default HUD positions
 - ⏱️ Update intervals
-- ✨ And more
 
 ## 🎮 Usage
 
 ### In-Game Commands
 
 - `/showmap` - Toggle minimap while on foot
-- `/testhud` - Test command for HUD
-- `B` - Toggle seatbelt (configurable in settings)
 
-### UI Customization
-
-- 🖱️ Drag & drop positioning
-- 🎨 Opacity and scale settings
-- 🎯 Background color customization
-- ↩️ Reset to default settings
 
 ## 🤝 Contributing
 
@@ -111,6 +99,20 @@ The HUD is optimized for minimal performance impact:
 Common issues and solutions:
 1. HUD not showing
    - ✔️ Check resource status
+  
+## 💖 Support My Work
+<div align="center">
+    <a href="https://bagibagi.co/enow">
+        <img src="https://img.shields.io/badge/BagiBagi-Support_Me-FF69B4?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTEyIDIxLjM1bC0xLjQ1LTEuMzJDNS40IDE1LjM2IDIgMTIuMjggMiA4LjUgMiA1LjQyIDQuNDIgMyA3LjUgM2MxLjc0IDAgMy40MS44MSA0LjUgMi4wOUMxMy4wOSAzLjgxIDE0Ljc2IDMgMTYuNSAzIDE5LjU4IDMgMjIgNS40MiAyMiA4LjVjMCAzLjc4LTMuNCA2Ljg2LTguNTUgMTEuNTRMMTIgMjEuMzV6IiBmaWxsPSJ3aGl0ZSIvPjwvc3ZnPg==" />
+    </a>
+    <a href="https://sociabuzz.com/enow14">
+        <img src="https://img.shields.io/badge/SociaBuzz-Support_Me-00B4DB?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTEyIDIxLjM1bC0xLjQ1LTEuMzJDNS40IDE1LjM2IDIgMTIuMjggMiA4LjUgMiA1LjQyIDQuNDIgMyA3LjUgM2MxLjc0IDAgMy40MS44MSA0LjUgMi4wOUMxMy4wOSAzLjgxIDE0Ljc2IDMgMTYuNSAzIDE5LjU4IDMgMjIgNS40MiAyMiA4LjVjMCAzLjc4LTMuNCA2Ljg2LTguNTUgMTEuNTRMMTIgMjEuMzV6IiBmaWxsPSJ3aGl0ZSIvPjwvc3ZnPg==" />
+    </a>
+</div>
+
+<div align="center">
+    <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png" width="100%">
+</div>
    - ✔️ Verify dependencies
 2. Performance issues
    - ⚡ Adjust update intervals
