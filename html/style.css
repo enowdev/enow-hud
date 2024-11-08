@@ -1,0 +1,234 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/* Status HUD */
+#status-hud {
+    position: fixed;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    transition: opacity 0.3s ease;
+}
+
+.status-bars {
+    display: flex;
+    gap: 10px;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 8px 15px;
+    border-radius: 6px;
+}
+
+.status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.status i {
+    font-size: 16px;
+    width: 20px;
+    text-align: center;
+    color: white;
+}
+
+.progress-bar {
+    width: 40px;
+    height: 8px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.fill {
+    height: 100%;
+    width: 0;
+    transition: width 0.3s ease;
+}
+
+/* Status colors */
+.health i { color: #e74c3c; }
+.health .fill { background: #e74c3c; }
+
+.armor i { color: #3498db; }
+.armor .fill { background: #3498db; }
+
+.hunger i { color: #e67e22; }
+.hunger .fill { background: #e67e22; }
+
+.thirst i { color: #2980b9; }
+.thirst .fill { background: #2980b9; }
+
+.stress i { color: #9b59b6; }
+.stress .fill { background: #9b59b6; }
+
+/* Voice styles */
+.voice i { 
+    color: #2ecc71;
+    transition: all 0.3s ease;
+}
+.voice .fill { 
+    background: #2ecc71;
+    transition: all 0.3s ease;
+}
+
+.voice.talking i {
+    animation: pulseVoice 1s infinite;
+}
+
+@keyframes pulseVoice {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+/* Vehicle HUD */
+#vehicle-hud {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    display: none;
+    transition: opacity 0.3s ease;
+}
+
+.car-container {
+    display: flex;
+    gap: 15px;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 10px 15px;
+    border-radius: 6px;
+    align-items: center;
+    color: white;
+}
+
+.speed {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.speed i {
+    color: #2ecc71;
+}
+
+.speed .value {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.speed .unit {
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+.fuel {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.fuel i {
+    color: #f1c40f;
+}
+
+.fuel .progress-bar {
+    width: 40px;
+    height: 8px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.fuel .fill {
+    height: 100%;
+    width: 100%;
+    background: #f1c40f;
+    transition: width 0.3s ease;
+}
+
+.seatbelt {
+    display: flex;
+    align-items: center;
+}
+
+.seatbelt i {
+    color: #e74c3c;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.seatbelt.active i {
+    color: #2ecc71;
+}
+
+/* Minimap outline yang lebih akurat */
+.minimap-outline {
+    position: fixed;
+    left: 30px;
+    bottom: 30px;
+    width: 270px;
+    height: 180px;
+    border: 2px solid rgb(0, 0, 0); /* Solid black */
+    border-radius: 6px;
+    pointer-events: none;
+    z-index: 0;
+    background: transparent;
+    display: none;
+    transition: opacity 0.3s ease;
+}
+
+/* Optional: tambahkan shadow untuk efek lebih baik */
+.minimap-outline::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 6px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+    pointer-events: none;
+}
+
+/* Tambahkan ini di bagian atas file */
+#status-hud,
+#vehicle-hud,
+.minimap-outline {
+    visibility: visible;
+    transition: visibility 0s linear;
+}
+
+/* Engine styles */
+.engine {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.engine i {
+    color: #e74c3c;
+}
+
+.engine .progress-bar {
+    width: 40px;
+    height: 8px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.engine .fill {
+    height: 100%;
+    width: 100%;
+    background: #e74c3c;
+    transition: width 0.3s ease;
+}
+
+.engine .value {
+    font-size: 14px;
+    min-width: 30px;
+}
