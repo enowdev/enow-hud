@@ -1,65 +1,6 @@
 Config = {}
-
--- Server/City Name Configuration
-Config.ServerName = {
-    enabled = true,
-    text = "Indonesia Indah Roleplay",
-    position = {
-        top = "20px",
-        left = "50%"
-    },
-    style = {
-        fontSize = "24px",
-        fontWeight = "bold",
-        letterSpacing = "2px",
-        textTransform = "uppercase",
-        background = "rgba(0, 0, 0, 0.3)",
-        padding = "15px",
-        borderRadius = "15px"
-    }
-}
-
--- Player Info Configuration
-Config.PlayerInfo = {
-    enabled = true,
-    position = {
-        top = "20px",
-        right = "20px"
-    },
-    style = {
-        width = "300px",
-        background = "rgba(0, 0, 0, 0.3)",
-        borderRadius = "8px",
-        padding = "15px"
-    },
-    header = {
-        text = "Identitas Player",
-        background = "rgba(0, 0, 0, 0.3)",
-        color = "white"
-    },
-    elements = {
-        name = {
-            enabled = true,
-            label = "Nama",
-            icon = "fa-user"
-        },
-        job = {
-            enabled = true,
-            label = "Pekerjaan",
-            icon = "fa-briefcase"
-        },
-        cash = {
-            enabled = true,
-            label = "Saldo Cash",
-            icon = "fa-wallet"
-        },
-        bank = {
-            enabled = true,
-            label = "Saldo Bank",
-            icon = "fa-building-columns"
-        }
-    }
-}
+
+
 
 Config.ShowHealth = true
 Config.ShowArmor = true
