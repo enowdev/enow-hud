@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,95 +8,72 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Status HUD -->
     <div id="status-hud">
         <div class="status-bars">
-            <!-- Health -->
-            <div class="status health">
-                <i class="fas fa-heart"></i>
-                <div class="progress-bar">
-                    <div class="fill"></div>
-                </div>
-            </div>
-            
-            <!-- Armor -->
-            <div class="status armor">
-                <i class="fas fa-shield-alt"></i>
-                <div class="progress-bar">
-                    <div class="fill"></div>
-                </div>
-            </div>
-            
-            <!-- Hunger -->
-            <div class="status hunger">
-                <i class="fas fa-hamburger"></i>
-                <div class="progress-bar">
-                    <div class="fill"></div>
-                </div>
-            </div>
-            
-            <!-- Thirst -->
-            <div class="status thirst">
-                <i class="fas fa-tint"></i>
-                <div class="progress-bar">
-                    <div class="fill"></div>
-                </div>
-            </div>
-            
-            <!-- Stress -->
-            <div class="status stress">
-                <i class="fas fa-brain"></i>
-                <div class="progress-bar">
-                    <div class="fill"></div>
-                </div>
-            </div>
-            
-            <!-- Voice -->
             <div class="status voice">
                 <i class="fas fa-microphone"></i>
                 <div class="progress-bar">
                     <div class="fill"></div>
                 </div>
             </div>
+            <div class="status health">
+                <i class="fas fa-heart"></i>
+                <div class="progress-bar">
+                    <div class="fill"></div>
+                </div>
+            </div>
+            <div class="status armor">
+                <i class="fas fa-shield-alt"></i>
+                <div class="progress-bar">
+                    <div class="fill"></div>
+                </div>
+            </div>
+            <div class="status hunger">
+                <i class="fas fa-hamburger"></i>
+                <div class="progress-bar">
+                    <div class="fill"></div>
+                </div>
+            </div>
+            <div class="status thirst">
+                <i class="fas fa-tint"></i>
+                <div class="progress-bar">
+                    <div class="fill"></div>
+                </div>
+            </div>
+            <div class="status stamina">
+                <i class="fas fa-running"></i>
+                <div class="progress-bar">
+                    <div class="fill"></div>
+                </div>
+            </div>
         </div>
     </div>
-
-    <!-- Vehicle HUD -->
-    <div id="vehicle-hud">
-        <div class="car-container">
-            <!-- Speed -->
-            <div class="speed">
+    <div class="car-container">
+        <div class="status-bars">
+            <div class="status speed">
                 <i class="fas fa-tachometer-alt"></i>
                 <span class="value">0</span>
-                <span class="unit">KM/H</span>
+                <span class="label">KM/H</span>
             </div>
-            
-            <!-- Fuel -->
-            <div class="fuel">
+            <div class="status fuel">
                 <i class="fas fa-gas-pump"></i>
                 <div class="progress-bar">
                     <div class="fill"></div>
                 </div>
-                <span class="value">100</span>
+                <span class="value">100%</span>
             </div>
-            
-            <!-- Engine -->
-            <div class="engine">
-                <i class="fas fa-car-battery"></i>
+            <div class="status engine">
+                <i class="fas fa-oil-can"></i>
                 <div class="progress-bar">
                     <div class="fill"></div>
                 </div>
-                <span class="value">100</span>
+                <span class="value">100%</span>
             </div>
-            
-            <!-- Seatbelt -->
             <div class="seatbelt">
                 <i class="fas fa-user-slash"></i>
             </div>
         </div>
     </div>
-
-    <!-- Tambahkan ini setelah bagian status-hud -->
     <div class="minimap-outline"></div>
 
     <script src="script.js"></script>

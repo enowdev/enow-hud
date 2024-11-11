@@ -1,4 +1,3 @@
-/* Reset */
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +5,6 @@
     font-family: sans-serif;
 }
 
-/* Status HUD */
 #status-hud {
     position: fixed;
     left: 50%;
@@ -50,7 +48,6 @@
     transition: width 0.3s ease;
 }
 
-/* Status colors */
 .health i { color: #e74c3c; }
 .health .fill { background: #e74c3c; }
 
@@ -63,30 +60,45 @@
 .thirst i { color: #2980b9; }
 .thirst .fill { background: #2980b9; }
 
-.stress i { color: #9b59b6; }
-.stress .fill { background: #9b59b6; }
-
-/* Voice styles */
-.voice i { 
-    color: #2ecc71;
-    transition: all 0.3s ease;
+.voice {
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
-.voice .fill { 
-    background: #2ecc71;
-    transition: all 0.3s ease;
+
+.voice i {
+    color: #ffffff;
+    transition: color 0.1s ease;
+}
+
+.voice .fill {
+    background: #ffffff;
+    transition: width 0.2s ease;
 }
 
 .voice.talking i {
-    animation: pulseVoice 1s infinite;
+    color: #2ecc71 !important;
+    animation: pulse 1s infinite;
 }
 
-@keyframes pulseVoice {
+.voice.talking .fill {
+    background: #2ecc71 !important;
+}
+
+@keyframes pulse {
     0% { transform: scale(1); }
     50% { transform: scale(1.2); }
     100% { transform: scale(1); }
 }
 
-/* Vehicle HUD */
+.voice .progress-bar {
+    width: 40px;
+    height: 8px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
 #vehicle-hud {
     position: fixed;
     right: 20px;
@@ -96,46 +108,112 @@
 }
 
 .car-container {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    display: none;
+}
+
+.car-container .status-bars {
     display: flex;
-    gap: 15px;
+    gap: 10px;
     background: rgba(0, 0, 0, 0.3);
-    padding: 10px 15px;
+    padding: 8px 15px;
     border-radius: 6px;
+}
+
+.car-container .status {
+    display: flex;
     align-items: center;
+    gap: 8px;
+}
+
+.car-container .status i {
+    font-size: 16px;
+    width: 20px;
+    text-align: center;
     color: white;
 }
 
-.speed {
+.car-container .speed {
     display: flex;
     align-items: center;
     gap: 8px;
 }
 
-.speed i {
-    color: #2ecc71;
+.car-container .speed i {
+    color: white;
 }
 
-.speed .value {
-    font-size: 18px;
-    font-weight: bold;
+.car-container .speed .value {
+    color: white;
+    min-width: 30px;
+    text-align: right;
 }
 
-.speed .unit {
-    font-size: 12px;
-    opacity: 0.7;
+.car-container .speed .label {
+    color: white;
+    font-size: 0.8em;
+    opacity: 0.8;
 }
 
-.fuel {
+.car-container .fuel {
     display: flex;
     align-items: center;
     gap: 8px;
 }
 
-.fuel i {
+.car-container .fuel i {
     color: #f1c40f;
 }
 
-.fuel .progress-bar {
+.car-container .fuel .fill {
+    background: #f1c40f;
+}
+
+.car-container .fuel .value {
+    color: white;
+    min-width: 25px;
+    text-align: right;
+}
+
+.car-container .engine {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.car-container .engine i {
+    color: #e74c3c;
+}
+
+.car-container .engine .fill {
+    background: #e74c3c;
+}
+
+.car-container .engine .value {
+    color: white;
+    min-width: 25px;
+    text-align: right;
+}
+
+.car-container .seatbelt {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.car-container .seatbelt i {
+    color: #e74c3c; /* Default merah */
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.car-container .seatbelt.active i {
+    color: #2ecc71; /* Hapus !important */
+}
+
+.car-container .progress-bar {
     width: 40px;
     height: 8px;
     background: rgba(0, 0, 0, 0.3);
@@ -143,36 +221,18 @@
     overflow: hidden;
 }
 
-.fuel .fill {
+.car-container .fill {
     height: 100%;
     width: 100%;
-    background: #f1c40f;
     transition: width 0.3s ease;
 }
 
-.seatbelt {
-    display: flex;
-    align-items: center;
-}
-
-.seatbelt i {
-    color: #e74c3c;
-    font-size: 16px;
-    transition: color 0.3s ease;
-}
-
-.seatbelt.active i {
-    color: #2ecc71;
-}
-
-/* Minimap outline yang lebih akurat */
 .minimap-outline {
     position: fixed;
     left: 30px;
     bottom: 30px;
     width: 270px;
     height: 180px;
-    border: 2px solid rgb(0, 0, 0); /* Solid black */
     border-radius: 6px;
     pointer-events: none;
     z-index: 0;
@@ -181,7 +241,6 @@
     transition: opacity 0.3s ease;
 }
 
-/* Optional: tambahkan shadow untuk efek lebih baik */
 .minimap-outline::after {
     content: '';
     position: absolute;
@@ -190,11 +249,9 @@
     right: 0;
     bottom: 0;
     border-radius: 6px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
     pointer-events: none;
 }
 
-/* Tambahkan ini di bagian atas file */
 #status-hud,
 #vehicle-hud,
 .minimap-outline {
@@ -202,7 +259,6 @@
     transition: visibility 0s linear;
 }
 
-/* Engine styles */
 .engine {
     display: flex;
     align-items: center;
@@ -231,4 +287,97 @@
 .engine .value {
     font-size: 14px;
     min-width: 30px;
+}
+
+.voice .indicator {
+    font-size: 20px;
+    color: #2ecc71;
+    margin-left: 5px;
+    display: none;
+}
+
+.voice.talking i {
+    color: #e74c3c;
+    animation: pulse 0.5s infinite;
+}
+
+.voice .progress-bar {
+    width: 40px;
+    height: 8px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.voice .fill {
+    height: 100%;
+    width: 0;
+    background: #2ecc71;
+    transition: width 0.3s ease;
+}
+
+/* Tambahkan style untuk stamina */
+.stamina i { color: #f39c12; } /* Orange */
+.stamina .fill { background: #f39c12; }
+
+
+/* Tambahkan style untuk car-container */
+.car-container {
+    display: none; /* Hidden by default */
+}
+
+.car-container.active {
+    display: block;
+}
+
+/* Update style untuk fuel dan engine */
+.car-container .status.fuel,
+.car-container .status.engine {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Kurangi gap antara elemen */
+}
+
+.car-container .status.fuel .value,
+.car-container .status.engine .value {
+    color: white;
+    min-width: 25px; /* Kurangi minimum width */
+    text-align: right;
+    margin-left: -2px; /* Tambahkan margin negatif untuk mendekatkan ke bar */
+}
+
+.car-container .status.fuel .progress-bar,
+.car-container .status.engine .progress-bar {
+    width: 40px;
+    height: 8px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+/* Warna spesifik untuk fuel */
+.car-container .status.fuel .fill {
+    background: #f1c40f; /* Warna kuning untuk bensin */
+}
+
+/* Style untuk fuel dan engine */
+.car-container .fuel,
+.car-container .engine {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.car-container .fuel .value,
+.car-container .engine .value {
+    color: white;
+    min-width: 35px; /* Lebih lebar untuk menampung % */
+    text-align: right;
+}
+
+.car-container .fuel .fill,
+.car-container .engine .fill {
+    height: 100%;
+    width: 0%; /* Start dari 0 */
+    transition: width 0.3s ease;
 }
